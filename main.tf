@@ -185,7 +185,6 @@ resource "aws_ecs_service" "default" {
   health_check_grace_period_seconds  = "${var.health_check_grace_period_seconds}"
   launch_type                        = "${var.launch_type}"
   cluster                            = "${var.ecs_cluster_arn}"
-  tags                               = "${module.default_label.tags}"
 
   load_balancer {
     target_group_arn = "${var.alb_target_group_arn}"
